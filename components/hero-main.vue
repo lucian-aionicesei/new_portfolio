@@ -1,5 +1,5 @@
 <template>
-    <article class="theme-grid pl-10 pr-24">
+    <article class="theme-grid pl-10 pr-24 pb-12">
             <img class=" aspect-square object-cover" src="../assets/images/lucian.jpg" alt="Lucian">
             <section class="flex flex-col col-start-3 justify-center">
                 <h1 class=" font-display">Frontend Developer with flair for UI/UX</h1>

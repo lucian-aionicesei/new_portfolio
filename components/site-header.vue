@@ -1,5 +1,5 @@
 <template>
-        <header class="theme-grid pl-10 pr-24 h-20">
+        <header class="theme-grid pl-10 pr-24 h-20 bg-primary">
             <div class="flex justify-between items-end pb-2">
                 <nuxt-link class=" font-bold text-lg" to="/">Lucian Aionicesei</nuxt-link>
                 <p class="text-base p-0">Frontend developer</p>

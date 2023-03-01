@@ -57,6 +57,6 @@
 
   @layer components {
     .theme-grid {
-      @apply grid grid-cols-[1fr_0.25fr_1fr];
+      @apply grid grid-cols-[1fr_0.2fr_1fr] gap-x-5;
     }
   }
