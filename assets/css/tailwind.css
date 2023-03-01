@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'dm-font';
+        src: url('../fonts/KantumruyPro-SemiBold.ttf');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'dm-font';
+        src: url('../fonts/KantumruyPro-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'aclonica';
+        src: url('../fonts/Aclonica-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* h1 {
+        font-family: 'aclonica', sans-serif;
+    } */
+
+    html {
+        font-family: 'dm-font', sans-serif;
+    }
+}
+
+@layer base {
+    html {
+        @apply bg-primary;
+    }
+    h1 {
+        @apply pb-6 text-3xl font-bold;
+    }
+    h2 {
+        @apply pb-6 text-2xl font-bold;
+    }
+    h3 {
+        @apply pb-6 text-xl font-bold;
+    }
+    h4 {
+        @apply pb-6 text-base font-bold;
+    }
+    p {
+        @apply pb-6 text-sm leading-7;
+    }
+
+  }
+
+  @layer components {
+    .theme-grid {
+      @apply grid grid-cols-[1fr_0.25fr_1fr];
+    }
+  }
