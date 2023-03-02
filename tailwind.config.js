@@ -5,6 +5,9 @@ module.exports = {
                 'body': ['dm-font', 'sans-serif'],
                 'display': ['aclonica', 'sans-serif'],
             },
+            fontSize: {
+                sm: '0.9rem',
+              },
             colors: {
                 'primary': '#F9F8F4',
                 'secondary': '#141414',
