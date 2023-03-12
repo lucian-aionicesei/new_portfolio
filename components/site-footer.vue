@@ -1,6 +1,6 @@
 <template>
     <footer class="w-full h-96 bg-secondary mt-5 text-primary text-sm">
-            <ul class="flex items-center justify-between px-40 h-full">
+            <ul class="flex flex-col lg:flex-row mx-auto gap-y-6 gap-x-16 justify-center items-center h-full w-fit">
                 <li>Lucian Aionicesei</li>
                 <li>+45 5020 4542</li>
                 <li>2300 København</li>

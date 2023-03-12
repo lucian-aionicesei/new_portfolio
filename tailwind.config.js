@@ -6,6 +6,7 @@ module.exports = {
                 'display': ['aclonica', 'sans-serif'],
             },
             fontSize: {
+                'xs': '0.85rem',
                 sm: '0.9rem',
               },
             colors: {
@@ -13,6 +14,7 @@ module.exports = {
                 'secondary': '#141414',
                 'accent': '#171717',
                 'light-gray': '#F0F0F0',
+                'dark-gray': '#202020',
             }
         }
     }

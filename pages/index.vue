@@ -1,5 +1,5 @@
 <template>
-    <main class="pt-8 pl-10 pr-24 flex flex-col gap-y-5">
+    <main class="px-8 pt-16 lg:pt-8 sm:px-10 lg:pr-24 flex flex-col gap-y-5">
         <hero-main />
         <grid-main />
         <call-me />

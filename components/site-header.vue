@@ -1,10 +1,10 @@
 <template>
-        <header class="theme-grid pl-10 pr-24 h-20 bg-primary">
+        <header class="flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
             <div class="flex justify-between items-end pb-2">
                 <nuxt-link class=" font-bold text-lg" to="/">Lucian Aionicesei</nuxt-link>
-                <p class="text-base p-0">Frontend developer</p>
+                <p class="hidden lg:block text-base p-0">Frontend developer</p>
             </div>
-            <div class="flex justify-between items-end col-start-3">
+            <div class="hidden lg:flex justify-between items-end col-start-3">
                 <nav class="h-full">
                     <ul class="flex font-bold uppercase text-sm h-full">
                         <li class="pl-3 pr-12 pb-2 flex items-end bg-secondary"><nuxt-link class=" text-white" to="/">Main</nuxt-link></li>
@@ -13,6 +13,12 @@
                     </ul>
                 </nav>
                 <img class="pb-2 w-10" src="../assets/icons/toggle.svg" alt="toggle dark mode">
+            </div>
+            <div class="lg:hidden col-start-3 lg:w-full h-full flex items-end justify-end">
+                <svg width="48" height="21" class="w-8 sm:w-10 h-auto pb-3" viewBox="0 0 48 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="3" x2="48" y2="3" stroke="black" stroke-width="6"/>
+                    <line y1="18" x2="48" y2="18" stroke="black" stroke-width="6"/>
+                </svg>
             </div>
         </header>
 </template>
