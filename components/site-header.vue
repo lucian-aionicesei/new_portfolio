@@ -1,5 +1,5 @@
 <template>
-        <header class="flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
+        <header :class="data.scrollDown && '-translate-y-full'" class=" transition-transform duration-300 delay-100 sticky top-0 z-50 flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
             <div class="flex justify-between items-end pb-2">
                 <nuxt-link class=" font-bold text-lg" to="/">Lucian Aionicesei</nuxt-link>
                 <p class="hidden lg:block text-base p-0">Frontend developer</p>
@@ -7,9 +7,10 @@
             <div class="hidden lg:flex justify-between items-end col-start-3">
                 <nav class="h-full">
                     <ul class="header-links flex font-bold uppercase text-sm h-full">
-                        <li class="pl-3 pr-12 pb-2 flex items-end bg-secondary text-white"><nuxt-link to="/">Main</nuxt-link></li>
-                        <li class="pl-3 pr-12 pb-2 flex items-end hover:bg-yellow-400 hover:text-white"><nuxt-link to="/about">About</nuxt-link></li>
-                        <li class="pl-3 pr-12 pb-2 flex items-end hover:bg-green-800 hover:text-white"><nuxt-link to="/contact">Contact</nuxt-link></li>
+                        <li :class="route.name === 'index' ? 'bg-secondary text-white' : 'hover:bg-red-400'" class=" pointer-events-none pl-3 pr-12 pb-2 flex items-end "><nuxt-link class="pointer-events-auto hover:text-white" to="/">Main</nuxt-link></li>
+                        <li :class="route.name === 'about' ? 'bg-secondary text-white' : 'hover:bg-blue-500'" class=" pointer-events-none pl-3 pr-12 pb-2 flex items-end">
+                            <nuxt-link class="pointer-events-auto hover:text-white" to="/about">About</nuxt-link></li>
+                        <li :class="route.name === 'contact' ? 'bg-secondary text-white' : 'hover:bg-yellow-400'" class=" pointer-events-none pl-3 pr-12 pb-2 flex items-end"><nuxt-link class="pointer-events-auto hover:text-white" to="/contact">Contact</nuxt-link></li>
                     </ul>
                 </nav>
                 <img class="pb-2 w-10" src="../assets/icons/toggle.svg" alt="toggle dark mode">
@@ -23,11 +24,51 @@
         </header>
 </template>
 
-<script>
-export default {};
+<script setup>
+const route = useRoute();
+
+watch(
+  () => route.name,
+  (newRoute) => {
+    return newRoute;
+  }
+);
+
+// Watch scroll direction
+
+const data = reactive({
+  scrollValue: 0,
+  scrollDown: false,
+});
+
+watch(
+  () => data.scrollValue,
+  (oldValue, newValue) => {
+    if (newValue > oldValue) {
+      data.scrollDown = false;
+    } else {
+      data.scrollDown = true;
+    }
+  }
+);
+
+watch(
+  () => data.scrollDown,
+  (newValue) => {
+    return newValue;
+  }
+);
+
+function getScrollValue() {
+  data.scrollValue = window.scrollY;
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", getScrollValue);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", getScrollValue);
+});
 </script>
 
-<style lang="scss" scoped>
-.header-links {
-}
-</style>
