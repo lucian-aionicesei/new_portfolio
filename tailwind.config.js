@@ -14,6 +14,7 @@ module.exports = {
                 'secondary': '#141414',
                 'accent': '#171717',
                 'light-gray': '#F0F0F0',
+                'mid-gray': '#DDDDDD',
                 'dark-gray': '#202020',
             }
         }

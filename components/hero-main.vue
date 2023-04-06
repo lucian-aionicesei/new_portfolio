@@ -1,5 +1,5 @@
 <template>
-    <article class="flex flex-col gap-y-14 lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-12">
+    <article class="flex flex-col gap-y-14 lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-12 2xl:container mx-auto">
         <img class="w-full aspect-square object-cover max-w-sm lg:max-w-none mx-auto" src="../assets/images/lucian.jpg" alt="Lucian">
         <section class="flex flex-col col-start-3 justify-center max-w-lg lg:max-w-none mx-auto">
             <h1 class="text-xl sm:text-3xl font-display">Frontend Developer with flair for UI/UX</h1>

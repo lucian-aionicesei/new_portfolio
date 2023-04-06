@@ -1,15 +1,15 @@
 <template>
-        <header class="flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
+        <header class="flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
             <div class="flex justify-between items-end pb-2">
                 <nuxt-link class=" font-bold text-lg" to="/">Lucian Aionicesei</nuxt-link>
                 <p class="hidden lg:block text-base p-0">Frontend developer</p>
             </div>
             <div class="hidden lg:flex justify-between items-end col-start-3">
                 <nav class="h-full">
-                    <ul class="flex font-bold uppercase text-sm h-full">
-                        <li class="pl-3 pr-12 pb-2 flex items-end bg-secondary"><nuxt-link class=" text-white" to="/">Main</nuxt-link></li>
-                        <li class="pl-3 pr-12 pb-2 flex items-end"><nuxt-link to="/about">About</nuxt-link></li>
-                        <li class="pl-3 pr-12 pb-2 flex items-end"><nuxt-link to="/contact">Contact</nuxt-link></li>
+                    <ul class="header-links flex font-bold uppercase text-sm h-full">
+                        <li class="pl-3 pr-12 pb-2 flex items-end bg-secondary text-white"><nuxt-link to="/">Main</nuxt-link></li>
+                        <li class="pl-3 pr-12 pb-2 flex items-end hover:bg-yellow-400 hover:text-white"><nuxt-link to="/about">About</nuxt-link></li>
+                        <li class="pl-3 pr-12 pb-2 flex items-end hover:bg-green-800 hover:text-white"><nuxt-link to="/contact">Contact</nuxt-link></li>
                     </ul>
                 </nav>
                 <img class="pb-2 w-10" src="../assets/icons/toggle.svg" alt="toggle dark mode">
@@ -26,3 +26,8 @@
 <script>
 export default {};
 </script>
+
+<style lang="scss" scoped>
+.header-links {
+}
+</style>

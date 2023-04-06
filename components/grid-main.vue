@@ -1,5 +1,5 @@
 <template>
-    <section class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5">
+    <section class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
             <article class=" aspect-[4/3] h-auto w-full bg-red-400 text-primary">
                 <div class="p-5 flex justify-between">
                     <div>
@@ -66,7 +66,7 @@
                     </a>
                 </div>
             </article>
-        </section>
+    </section>
 </template>
 
 <script>
