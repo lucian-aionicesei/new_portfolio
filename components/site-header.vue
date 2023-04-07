@@ -1,5 +1,5 @@
 <template>
-        <header :class="data.scrollDown && '-translate-y-full'" class=" transition-transform duration-300 delay-100 sticky top-0 z-50 flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
+        <header :class="data.scrollDown && '-translate-y-full'" class=" transition-transform duration-300 delay-100 sticky top-0 z-40 flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5 px-8 sm:px-10 lg:pr-24 h-20 bg-primary">
             <div class="flex justify-between items-end pb-2">
                 <nuxt-link class=" font-bold text-lg" to="/">Lucian Aionicesei</nuxt-link>
                 <p class="hidden lg:block text-base p-0">Frontend developer</p>
