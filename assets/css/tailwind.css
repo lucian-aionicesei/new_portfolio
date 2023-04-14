@@ -36,7 +36,7 @@
 
 @layer base {
     html {
-        @apply bg-primary;
+        @apply bg-primary dark:bg-secondary;
     }
     h1 {
         @apply pb-6 text-3xl font-bold;

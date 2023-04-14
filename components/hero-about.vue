@@ -1,5 +1,5 @@
 <template>
-    <article class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 sm:pb-12 2xl:container mx-auto">
+    <article class="dark:text-primary flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 sm:pb-12 2xl:container mx-auto">
         <div class=" lg:aspect-square w-full h-fit lg:h-full pt-16 relative">
             <div class="font-display max-w-sm sm:max-w-lg lg:max-w-xl sm:mx-auto">
                 <p class="text-7xl sm:text-9xl pb-2">About</p>

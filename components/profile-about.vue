@@ -1,5 +1,5 @@
 <template>
-    <article class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-10 bg-light-gray 2xl:container mx-auto">
+    <article class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-10 dark:bg-dark-gray bg-light-gray dark:text-primary 2xl:container mx-auto">
             <section class="w-full h-full relative p-5 sm:p-10 pb-0 col-span-2 xl:col-span-1">
                     <h1 class="font-display pb-10 text-5xl">Profile</h1>
                     <h3>Lucian Aionicesei</h3>

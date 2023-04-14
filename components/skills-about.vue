@@ -1,5 +1,5 @@
 <template>
-    <article class="pb-10 bg-[#E9FBD3] w-full 2xl:container mx-auto">
+    <article class="pb-10 dark:bg-dark-gray dark:text-primary bg-[#E9FBD3] w-full 2xl:container mx-auto">
             <h1 class="font-display p-5 sm:p-10 text-5xl ">Skills</h1>
             <div class="w-full flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 gap-y-5 px-5 sm:px-10">
                 <section class="w-full h-full relative  col-span-2 xl:col-span-1 pr-0 lg:pr-10 xl:pr-0">
@@ -13,7 +13,7 @@
                 </section>
                 <section class="w-full h-full relative col-span-3 xl:col-span-2">
                             <h3>Tools</h3>
-                            <div class=" h-60 w-full bg-green-300"></div>
+                            <div class=" h-60 w-full dark:bg-secondary bg-green-300"></div>
                 </section>
             </div>
         </article>
