@@ -5,7 +5,7 @@
             <h1 class="text-xl sm:text-3xl font-display">Frontend Developer with flair for UI/UX</h1>
             <p>Lorem ipsum dolor sit amet aliquam eiusmod nulla fermentum interdum dictum phasellus lajoreet facilisi. Dictum ornare nunc praesent aliquam lacus lobortis dictum risus. Vulputate netus venenatis fringilla dolore duis elit aliqua nulla lobortis purus. Venenatis do iaculis lacinia aenean sagittis orci phasellus aliquet diam. Massa mollis viverra facilisis vivamus venenatis facilisi massa.</p>
             <div class="flex gap-x-6">
-                <button class=" text-base font-bold bg-secondary text-white px-10 h-12 my-1 rounded-md">Contact</button>
+                <button class=" text-base font-bold dark:bg-primary bg-secondary dark:text-black text-white px-10 h-12 my-1 rounded-md">Contact</button>
                 <a class="w-12" href="https://www.linkedin.com/in/lucian-aionicesei/" target=”_blank” rel="noreferrer noopener"><Icon class="h-full w-auto" name="uil:linkedin" /></a>
                 <a class="w-12" href="https://github.com/lucian-aionicesei" target=”_blank” rel="noreferrer noopener"><Icon class="h-full w-auto" name="uil:github" /></a>
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="dark:bg-secondary transition-all">
         <site-header />
         <slot />
         <site-footer />
