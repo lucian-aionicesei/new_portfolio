@@ -33,10 +33,8 @@
             <article @click='toggleProject' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-green-400">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
-                        <h4 class="pb-1 text-base sm:text-lg">The most recent project</h4>
-                        <p class="text-base sm:text-lg">Website portfolio 2.0</p>
+                        <h2 class="text-xl sm:text-3xl font-display">Reviews</h2>
                     </div>
-                    <expand-icon></expand-icon>
                 </div>
                 <img class=" px-6 md:px-28 lg:px-[4vw] ml-auto lg:max-w-[42vw]" src="../assets/images/akva.png" alt="">
             </article>
