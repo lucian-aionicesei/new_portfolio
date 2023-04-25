@@ -13,7 +13,28 @@
                 </section>
                 <section class="w-full h-full relative col-span-3 xl:col-span-2">
                             <h3>Tools</h3>
-                            <div class=" h-60 w-full dark:bg-secondary bg-green-300"></div>
+                            <div class="w-full flex flex-wrap gap-5 pb-6">
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Vue JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Vanilla JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">React JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Illustrator</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Illustrator</p>
+                  </div>
+                </div>
                 </section>
             </div>
         </article>

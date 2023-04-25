@@ -1,5 +1,5 @@
 <template>
-    <article class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-10 dark:bg-dark-gray bg-light-gray dark:text-primary 2xl:container mx-auto">
+    <article class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-x-5 pb-10 dark:bg-dark-gray bg-light-gray dark:text-primary 2xl:container mx-auto w-full">
             <section class="w-full h-full relative p-5 sm:p-10 pb-0 col-span-2 xl:col-span-1">
                     <h1 class="font-display pb-10 text-5xl">Profile</h1>
                     <h3>Lucian Aionicesei</h3>
@@ -36,8 +36,24 @@
                         </li>
                     </ul>
             </section>
-            <section class="flex items-center justify-center col-start-3 pr-0 lg:pr-10 pt-10">
-                <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto" src="../assets/images/lucian.jpg" alt="Lucian">
+            <section class="overflow-hidden flex items-center justify-center col-start-3 pr-0 lg:pr-10 pt-10">
+                <swiper :loop="true" :modules="[SwiperAutoplay]"
+                :autoplay="{
+                  delay: 3000,
+                  disableOnInteraction: true,
+                }"
+                class="mySwiper pointer-events-none">
+                      <swiper-slide class="w-fit">
+                        <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/bartending.png" alt="Lucian"> 
+                      </swiper-slide>
+                      <swiper-slide class="w-fit">
+                        <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/checkmate.png" alt="Lucian"> 
+                      </swiper-slide>
+                      <swiper-slide class="w-fit">
+                        <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/graduation.png" alt="Lucian"> 
+                      </swiper-slide>
+                </swiper>
+                <!-- <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto" src="../assets/images/lucian.jpg" alt="Lucian"> -->
             </section>
         </article>
 </template>

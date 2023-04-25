@@ -3,12 +3,12 @@
             <article v-for="i in 5" :key="i" @click='toggleProject' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-red-400 text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
-                        <h4 class="pb-1 text-base sm:text-lg">The most recent project</h4>
+                        <h4 class="pb-1 text-base sm:text-lg cursor-pointer">The most recent project</h4>
                         <p class="text-base sm:text-lg">Website portfolio 2.0</p>
                     </div>
-                    <expand-icon></expand-icon>
+                    <expand-icon class=" hover:scale-125 ease-out transition-all cursor-pointer"></expand-icon>
                 </div>
-                <img class=" px-6 md:px-28 lg:px-[4vw] ml-auto lg:max-w-[42vw]" src="../assets/images/akva.png" alt="">
+                <img class="hover:scale-105 ease-out transition-all cursor-pointer px-6 md:px-28 lg:px-[4vw] ml-auto lg:max-w-[42vw]" src="../assets/images/akva.png" alt="">
             </article>
             <article class="overflow-hidden w-full bg-yellow-300 flex flex-col">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
