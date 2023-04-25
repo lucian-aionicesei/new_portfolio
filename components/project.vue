@@ -28,10 +28,30 @@
               <div class=" col-start-3">
                 <h2 class=" font-display">Tools</h2>
                 <div class="w-full flex flex-wrap gap-5 pb-6">
-                  <div class="w-14 h-14 bg-mid-gray"></div>
-                  <div class="w-14 h-14 bg-mid-gray"></div>
-                  <div class="w-14 h-14 bg-mid-gray"></div>
-                  <div class="w-14 h-14 bg-mid-gray"></div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Vue JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Vanilla JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">React JS</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Illustrator</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Illustrator</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <img src="../assets/icons/vue-js.svg" class="w-14 h-auto" alt="vue-js-icon">
+                    <p class="font-bold">Illustrator</p>
+                  </div>
                 </div>
               </div>
               <div>
