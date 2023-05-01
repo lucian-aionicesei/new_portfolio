@@ -14,7 +14,7 @@
         </div>
         <section class="flex flex-col col-start-3 justify-center max-w-lg lg:max-w-none mx-auto">
             <h1 class="text-xl sm:text-3xl font-display pt-10 lg:pt-24">What Frontend Development means to me</h1>
-            <p>Lorem ipsum dolor sit amet aliquam eiusmod nulla fermentum interdum dictum phasellus lajoreet facilisi. Dictum ornare nunc praesent aliquam lacus lobortis dictum risus. Vulputate netus venenatis fringilla dolore duis elit aliqua nulla lobortis purus. Venenatis do iaculis lacinia aenean sagittis orci phasellus aliquet diam. Massa mollis viverra facilisis vivamus venenatis facilisi massa.</p>
+            <p>The ability to make a design come to life and make it functional is the number one reason why I love frontend development. I’m driven and I’m willing to spend some of my free time to find solutions and approaches to solving any given task. I believe that a website can enhance the customer’s experience with a brand, and our job is to make that possible.</p>
         </section>
     </article>
 </template>

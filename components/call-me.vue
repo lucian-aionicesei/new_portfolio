@@ -6,7 +6,7 @@
                 <p class="font-body pb-10">Would you like to find out more or go out for a coffee?</p>
                 <ul class="dark:text-sky-300 text-sky-900">
                     <li class=" text-3xl font-display">+45 5020 4542</li>
-                    <li class=" font-bold">lucian.aionicesei@gmail.com</li>
+                    <li class=" font-bold"><a href = "mailto: lucian.aionicesei@gmail.com">lucian.aionicesei@gmail.com</a></li>
                 </ul>
             </article>
     </section>

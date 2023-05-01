@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.8",
+    "firebase": "^9.21.0",
     "nuxt-swiper": "^1.1.0",
     "pinia": "^2.0.34"
   }
