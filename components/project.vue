@@ -74,6 +74,22 @@
 
 <script setup>
 import { useCoreStore } from "~/stores/core";
+// import { collection, getDocs } from "firebase/firestore";
+
+// const nuxtApp = useNuxtApp();
+// const db = nuxtApp.$firestore;
+
+// console.log(db);
+
+// const querySnapshot = await getDocs(collection(db, "projects"));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
+
+// const querySnapshot = await getDocs(collection(db, "projects"));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
 
 const coreStore = useCoreStore();
 
