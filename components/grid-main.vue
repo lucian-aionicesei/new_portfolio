@@ -1,10 +1,10 @@
 <template>
     <section class="grid-main flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
-            <article @click='toggleProject()' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-red-400 text-primary">
+            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject()' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-red-400 text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
-                        <h4 class="pb-1 text-base sm:text-lg cursor-pointer">AKVA Jewellery</h4>
-                        <p class="text-base sm:text-lg">Website ad SoMe strategy</p>
+                        <h4 class="pb-1 text-base sm:text-lg cursor-pointer" v-text="project.title"></h4>
+                        <p class="text-base sm:text-lg" v-text="project.subheader"></p>
                     </div>
                     <expand-icon class=" hover:scale-125 ease-out transition-all cursor-pointer"></expand-icon>
                 </div>
@@ -108,6 +108,10 @@
 
 <script setup>
 import { useCoreStore } from "~/stores/core";
+
+const data = defineProps(["projects"]);
+
+console.log(data);
 
 const coreStore = useCoreStore();
 

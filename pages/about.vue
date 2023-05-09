@@ -7,9 +7,5 @@
     </main>
 </template>
 
-<script>
-import heroAbout from "~~/components/hero-about.vue";
-export default {
-  components: { heroAbout },
-};
+<script setup>
 </script>

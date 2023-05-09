@@ -18,8 +18,9 @@
               </div>
             </div>
             <div class=" transition-all w-full h-[50vh] sm:h-[70vh] bg-red-400 lg:pr-[13vw] pt-14 overflow-hidden">
-              <img class="ml-auto px-[8vw] lg:px-0 lg:w-[45rem]" src="../assets/images/asgaard_fest 1.png" alt="">
+              <img class="ml-auto px-[8vw] lg:px-0 lg:w-[45rem]" :src="url" alt="">
             </div>
+            {{ url }}
             <div class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 px-5 sm:px-10 py-10">
               <div>
                 <h2 class=" font-display">Project focus</h2>
@@ -74,6 +75,53 @@
 
 <script setup>
 import { useCoreStore } from "~/stores/core";
+import { useCollection } from "vuefire";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { ref as storageRef } from "firebase/storage";
+import {
+  useFirestore,
+  useFirebaseStorage,
+  useStorageFile,
+  useStorageFileUrl,
+} from "vuefire";
+// import { useFirebaseStorage, useStorageFile } from 'vuefire'
+
+const db = useFirestore();
+// const storage = useFirebaseStorage();
+// const imagesRef = storageRef(storage, "images");
+// const spaceRef = useStorageFile(imagesRef, "venetian.jpeg");
+
+// console.log(spaceRef);
+
+const storage = useFirebaseStorage();
+const venetian = storageRef(storage, "images/venetian.jpeg");
+const {
+  url,
+  // refresh the url if the file changes
+  refresh,
+} = useStorageFileUrl(venetian);
+
+console.log(url);
+
+// ******* Getting an entire collection
+
+const projects = useCollection(collection(db, "projects"));
+
+// ******* Getting a single file
+
+// const q = query(
+//   collection(db, "projects"),
+//   where("title", "==", "AKVA Jewellery")
+// );
+
+// const querySnapshot = await getDocs(q);
+// querySnapshot.forEach((doc) => {
+//   // doc.data() is never undefined for query doc snapshots
+//   console.log(doc.id, " => ", doc.data());
+// });
+
+// ************
+
 // import { collection, getDocs } from "firebase/firestore";
 
 // const nuxtApp = useNuxtApp();
