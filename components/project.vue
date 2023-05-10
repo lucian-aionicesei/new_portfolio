@@ -5,8 +5,8 @@
           <div class="inner-content relative w-full h-full z-10 overflow-y-scroll gap-y-10 dark:bg-secondary bg-primary">
             <div class=" sticky top-0 w-full h-20 dark:bg-dark-gray bg-white flex justify-between md:grid grid-cols-[1fr_0.2fr_1fr] md:gap-x-5">
               <div class="flex justify-between items-center">
-                <p class=" font-bold text-lg p-0 pl-6">Asgaard Fest</p>
-                <p class="hidden lg:block text-base p-0">Ticket purchasing app</p>
+                <p v-text="data.project.title" class=" font-bold text-lg p-0 pl-6"></p>
+                <p v-text="data.project.subheader" class="hidden lg:block text-base p-0"></p>
               </div>
               <div class=" col-start-3 h-full items-center justify-end flex gap-x-6 px-6">
                 <a class="w-12" href="https://github.com/lucian-aionicesei" target=”_blank” rel="noreferrer noopener"><Icon class="h-auto w-full" name="uil:github" /></a>
@@ -18,9 +18,10 @@
               </div>
             </div>
             <div class=" transition-all w-full h-[50vh] sm:h-[70vh] bg-red-400 lg:pr-[13vw] pt-14 overflow-hidden">
-              <img class="ml-auto px-[8vw] lg:px-0 lg:w-[45rem]" :src="url" alt="">
+              <img class="ml-auto px-[8vw] lg:px-0 lg:w-[45rem]" :src="data.project.imgRef" alt="">
             </div>
-            {{ url }}
+            <!-- {{ url }} -->
+            <!-- {{ data.project }} -->
             <div class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 px-5 sm:px-10 py-10">
               <div>
                 <h2 class=" font-display">Project focus</h2>
@@ -86,39 +87,49 @@ import {
 } from "vuefire";
 // import { useFirebaseStorage, useStorageFile } from 'vuefire'
 
+const coreStore = useCoreStore();
+
 const db = useFirestore();
+const data = reactive({
+  project: coreStore.currentProject,
+});
 // const storage = useFirebaseStorage();
 // const imagesRef = storageRef(storage, "images");
 // const spaceRef = useStorageFile(imagesRef, "venetian.jpeg");
 
 // console.log(spaceRef);
 
-const storage = useFirebaseStorage();
-const venetian = storageRef(storage, "images/venetian.jpeg");
-const {
-  url,
-  // refresh the url if the file changes
-  refresh,
-} = useStorageFileUrl(venetian);
+// *************
 
-console.log(url);
+// const storage = useFirebaseStorage();
+// const venetian = storageRef(storage, "images/venetian.jpeg");
+// const {
+//   url,
+//   // refresh the url if the file changes
+//   refresh,
+// } = useStorageFileUrl(venetian);
+
+// console.log(url);
 
 // ******* Getting an entire collection
 
-const projects = useCollection(collection(db, "projects"));
+// const projects = useCollection(collection(db, "projects"));
 
 // ******* Getting a single file
 
-// const q = query(
-//   collection(db, "projects"),
-//   where("title", "==", "AKVA Jewellery")
-// );
+async function getProject(projectTitle) {
+  const q = query(
+    collection(db, "projects"),
+    where("title", "==", projectTitle)
+  );
 
-// const querySnapshot = await getDocs(q);
-// querySnapshot.forEach((doc) => {
-//   // doc.data() is never undefined for query doc snapshots
-//   console.log(doc.id, " => ", doc.data());
-// });
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    coreStore.currentProject = (doc.id, " => ", doc.data());
+  });
+}
 
 // ************
 
@@ -139,8 +150,6 @@ const projects = useCollection(collection(db, "projects"));
 //   console.log(`${doc.id} => ${doc.data()}`);
 // });
 
-const coreStore = useCoreStore();
-
 const showProject = computed(() => {
   return coreStore.getShowProject;
 });
@@ -156,6 +165,26 @@ watch(
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
+    }
+  }
+);
+
+watch(
+  () => coreStore.projectTitle,
+  (newVal) => {
+    if (newVal) {
+      console.log(newVal);
+      getProject(newVal);
+      console.log(data.project);
+    }
+  }
+);
+
+watch(
+  () => coreStore.currentProject,
+  (newVal) => {
+    if (newVal) {
+      data.project = newVal;
     }
   }
 );

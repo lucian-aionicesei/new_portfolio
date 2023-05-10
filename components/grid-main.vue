@@ -1,6 +1,6 @@
 <template>
     <section class="grid-main flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
-            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject()' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-red-400 text-primary">
+            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject(project.title)' :class="`bg-${themeColor[index]}`" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
                         <h4 class="pb-1 text-base sm:text-lg cursor-pointer" v-text="project.title"></h4>
@@ -8,7 +8,7 @@
                     </div>
                     <expand-icon class=" hover:scale-125 ease-out transition-all cursor-pointer"></expand-icon>
                 </div>
-                <img class="hover:scale-105 ease-out transition-all cursor-pointer px-6 md:px-28 lg:px-[4vw] ml-auto lg:max-w-[42vw]" src="../assets/images/akva.png" alt="">
+                <img class="hover:scale-105 ease-out transition-all cursor-pointer px-6 md:px-28 lg:px-[4vw] ml-auto lg:max-w-[42vw]" :src="project.imgRef" alt="">
             </article>
             <article @click='toggleProject' class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full bg-red-400 text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
@@ -111,6 +111,17 @@ import { useCoreStore } from "~/stores/core";
 
 const data = defineProps(["projects"]);
 
+const themeColor = [
+  "red-400",
+  "[#202020]",
+  "[#202020]",
+  "blue-400",
+  "yellow-400",
+  "[#202020]",
+  "[#202020]",
+  "red-400",
+];
+
 console.log(data);
 
 const coreStore = useCoreStore();
@@ -119,9 +130,12 @@ const showProject = computed(() => {
   return coreStore.getShowProject;
 });
 
-const toggleProject = () => {
+function toggleProject(openedProject) {
+  console.log(openedProject);
+  coreStore.projectTitle = openedProject;
+  console.log(coreStore.projectTitle);
   coreStore.showProject = !coreStore.showProject;
-};
+}
 </script>
 
 <style scoped>

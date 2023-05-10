@@ -19,5 +19,10 @@ module.exports = {
                 'dark-gray': '#202020',
             }
         }
-    }
+    },
+    safelist: [
+        {
+            pattern: /^(bg-)/,
+          },
+      ],
   }

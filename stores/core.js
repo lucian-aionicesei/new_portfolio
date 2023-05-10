@@ -5,6 +5,9 @@ export const useCoreStore = defineStore('CoreStore', {
         return {
             showMenu: false,
             showProject: false,
+            projectTitle: '',
+            themeColor: '#202020',
+            currentProject: {},
             darkMode: false,
         }
     },
@@ -14,6 +17,9 @@ export const useCoreStore = defineStore('CoreStore', {
         },
         getShowProject(state) {
             return state.showProject;
+        },
+        getProject(state) {
+            return state.openedProject;
         },
         getDarkMode(state) {
             return state.darkMode;
