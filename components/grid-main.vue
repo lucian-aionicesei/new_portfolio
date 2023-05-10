@@ -1,6 +1,6 @@
 <template>
     <section class="grid-main flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
-            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject(project.title)' :class="`bg-${themeColor[index]}`" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
+            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject(project.title, themeColor[index])' :class="`bg-${themeColor[index]}`" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
                         <h4 class="pb-1 text-base sm:text-lg cursor-pointer" v-text="project.title"></h4>
@@ -130,8 +130,10 @@ const showProject = computed(() => {
   return coreStore.getShowProject;
 });
 
-function toggleProject(openedProject) {
+function toggleProject(openedProject, color) {
   console.log(openedProject);
+  console.log(color);
+  coreStore.themeColor = color;
   coreStore.projectTitle = openedProject;
   console.log(coreStore.projectTitle);
   coreStore.showProject = !coreStore.showProject;
