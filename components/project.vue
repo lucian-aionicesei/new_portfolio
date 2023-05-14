@@ -18,7 +18,7 @@
                   </a>
               </div>
             </div>
-            <div :class="`bg-${data.themeColor}`" class=" transition-all w-full h-[50vh] sm:h-[70vh] bg-red-400 lg:pr-[13vw] pt-14 overflow-hidden">
+            <div :class="data.themeColor" class=" transition-all w-full h-[50vh] sm:h-[70vh] bg-red-400 lg:pr-[13vw] pt-14 overflow-hidden">
               <a :href="data.project.url" target=”_blank” rel="noreferrer noopener"> <img class="ml-auto px-[8vw] lg:px-0 lg:w-[45rem]" :src="data.project.imgRef" alt=""> </a>
             </div>
             <!-- {{ url }} -->
