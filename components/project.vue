@@ -24,7 +24,7 @@
             <!-- {{ url }} -->
             <!-- {{ data.project }} -->
             <div class="flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 px-5 sm:px-10 py-10">
-              <div>
+              <div v-if="data.project.about">
                 <h2 class=" font-display">About the project</h2>
                 <p v-text="data.project.about"></p>
               </div>
@@ -56,15 +56,15 @@
                     <p class="font-bold">Illustrator</p>
                   </div>
                 </div> -->
-                <ul class="flex gap-x-10">
+                <ul class="flex flex-wrap gap-x-10 gap-y-5">
                   <li v-for="(tool, index) in data.project.tools" :key="index" v-text="tool" class=" font-bold text-lg"></li>
                 </ul>
               </div>
-              <div>
+              <div v-if="data.project.focus">
                 <h2 class=" font-display">Project focus</h2>
                 <p v-text="data.project.focus"></p>
               </div>
-              <div class="col-start-3">
+              <div v-if="data.project.insights" class="col-start-3">
                 <h2 class=" font-display">Insights</h2>
                 <p v-text="data.project.insights"></p>
               </div>

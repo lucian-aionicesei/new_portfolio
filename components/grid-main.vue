@@ -1,6 +1,6 @@
 <template>
     <section class="grid-main flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
-            <article v-for="(project, index) in data.projects" :key="index" @click='toggleProject(project.title, themeColor[index])' :class="themeColor[index]" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
+            <article v-for="(project, index) in data.projects.slice().reverse()" :key="index" @click='toggleProject(project.title, themeColor[index])' :class="themeColor[index]" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
                         <h4 class="pb-1 text-base sm:text-lg cursor-pointer" v-text="project.title"></h4>
@@ -72,11 +72,11 @@ import { useCoreStore } from "~/stores/core";
 const data = defineProps(["projects"]);
 
 const themeColor = [
-  "bg-red-400",
+  "bg-red-500",
   "bg-[#202020]",
   "bg-[#202020]",
-  "bg-blue-400",
-  "bg-yellow-400",
+  "bg-blue-600",
+  "bg-green-500",
   "bg-[#202020]",
   "bg-[#202020]",
   "bg-red-400",
