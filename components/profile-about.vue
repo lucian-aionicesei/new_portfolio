@@ -3,7 +3,7 @@
             <section class="w-full h-full relative p-5 sm:p-10 pb-0 col-span-2 xl:col-span-1">
                     <h1 class="font-display pb-10 text-5xl">Profile</h1>
                     <h3>Lucian Aionicesei</h3>
-                    <p class="pb-10">Lorem ipsum dolor sit amet aliquam eiusmod nulla fermentum interdum dictum phasellus lajoreet facilisi. Dictum ornare nunc praesent aliquam lacus lobortis dictum risus. Vulputate netus venenatis fringilla dolore duis elit aliqua nulla lobortis purus.</p>
+                    <p class="pb-10">As someone who values connections with others, I have gained over four years of experience working as a bartender in Copenhagen. In my free time, I enjoy being active through activities like climbing, biking, and swimming, which keep me energized and motivated in both my personal and professional pursuits.</p>
                     <ul class="flex flex-col gap-y-4 font-bold text-xs">
                         <li class="flex items-center gap-x-4"><svg width="28" height="33" viewBox="0 0 28 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M27.6057 10.569C25.9493 3.28113 19.5921 0 14.0079 0C14.0079 0 14.0079 0 13.9921 0C8.42363 0 2.05067 3.26535 0.394332 10.5532C-1.4513 18.693 3.53349 25.5865 8.04504 29.9245C9.71716 31.5335 11.8626 32.3381 14.0079 32.3381C16.1533 32.3381 18.2986 31.5335 19.955 29.9245C24.4665 25.5865 29.4513 18.7087 27.6057 10.569ZM14.0079 18.4721C11.2631 18.4721 9.03885 16.2479 9.03885 13.5031C9.03885 10.7583 11.2631 8.53409 14.0079 8.53409C16.7527 8.53409 18.9769 10.7583 18.9769 13.5031C18.9769 16.2479 16.7527 18.4721 14.0079 18.4721Z" class="fill-black dark:fill-primary"/>

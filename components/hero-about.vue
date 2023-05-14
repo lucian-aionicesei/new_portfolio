@@ -13,8 +13,9 @@
             </div>
         </div>
         <section class="flex flex-col col-start-3 justify-center max-w-lg lg:max-w-none mx-auto">
-            <h1 class="text-xl sm:text-3xl font-display pt-10 lg:pt-24">What Frontend Development means to me</h1>
-            <p>The ability to make a design come to life and make it functional is the number one reason why I love frontend development. I’m driven and I’m willing to spend some of my free time to find solutions and approaches to solving any given task. I believe that a website can enhance the customer’s experience with a brand, and our job is to make that possible.</p>
+            <h1 class="text-xl sm:text-3xl font-display pt-10 lg:pt-24">My frontend development journey</h1>
+            <p>In late 2019, I realized that bartending was not a sustainable long-term career for me. Seeking a new challenge, I enrolled in the online computer science course, CS50, where I discovered my passion for programming. This led me to pursue a career that combined both design and coding.</p>
+            <p>I completed the Multimedia Design program at KEA in 2023 and gained invaluable experience during my four-month internship at Checkmate. Working with component based programming languages such as Vue and Nuxt enhanced my knowledge and skills as a frontend developer, and I'm excited to continue growing in this dynamic field.</p>
         </section>
     </article>
 </template>

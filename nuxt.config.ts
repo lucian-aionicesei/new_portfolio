@@ -23,7 +23,7 @@ export default defineNuxtConfig({
           storageBucket: "porfolio-2023-637f0.appspot.com",
           messagingSenderId: "215118836037",
           appId: "1:215118836037:web:c9c5688fb489530908ce2c",
-          storageBucket: "gs://porfolio-2023-637f0.appspot.com"
+          // storageBucket: "gs://porfolio-2023-637f0.appspot.com"
           // there could be other properties depending on the project
         },
       },
