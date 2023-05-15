@@ -72,7 +72,7 @@ import { useCoreStore } from "~/stores/core";
 const data = defineProps(["projects"]);
 
 const themeColor = [
-  "bg-red-500",
+  "bg-red-400",
   "bg-[#202020]",
   "bg-[#202020]",
   "bg-blue-600",

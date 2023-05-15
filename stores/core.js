@@ -5,7 +5,8 @@ export const useCoreStore = defineStore('CoreStore', {
         return {
             showMenu: false,
             showProject: false,
-            projectTitle: '',
+            projectIndex: undefined,
+            projects: undefined,
             themeColor: '[#202020]',
             currentProject: {},
             darkMode: false,
