@@ -5,8 +5,19 @@ export const useCoreStore = defineStore('CoreStore', {
         return {
             showMenu: false,
             showProject: false,
-            projectTitle: '',
+            projectIndex: undefined,
+            projects: undefined,
             themeColor: '[#202020]',
+            themeColors: [
+                "bg-red-400",
+                "bg-[#202020]",
+                "bg-[#202020]",
+                "bg-blue-600",
+                "bg-green-500",
+                "bg-[#202020]",
+                "bg-[#202020]",
+                "bg-red-400",
+              ],
             currentProject: {},
             darkMode: false,
         }

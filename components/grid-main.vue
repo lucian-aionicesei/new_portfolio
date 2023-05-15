@@ -1,6 +1,6 @@
 <template>
     <section class="grid-main flex flex-col lg:grid grid-cols-[1fr_0.2fr_1fr] gap-5 2xl:container 2xl:mx-auto">
-            <article v-for="(project, index) in data.projects.slice().reverse()" :key="index" @click='toggleProject(project.title, themeColor[index])' :class="themeColor[index]" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
+            <article v-for="(project, index) in data.projects.slice().reverse()" :key="index" @click='toggleProject(index)' :class="coreStore.themeColors[index]" class=" overflow-hidden aspect-[4/3] md:aspect-[5/3] lg:aspect-auto lg:h-[29vw] w-full text-primary">
                 <div class="pt-5 px-5 sm:py-5 flex justify-between">
                     <div>
                         <h4 class="pb-1 text-base sm:text-lg cursor-pointer" v-text="project.title"></h4>
@@ -68,34 +68,46 @@
 
 <script setup>
 import { useCoreStore } from "~/stores/core";
-
-const data = defineProps(["projects"]);
-
-const themeColor = [
-  "bg-red-500",
-  "bg-[#202020]",
-  "bg-[#202020]",
-  "bg-blue-600",
-  "bg-green-500",
-  "bg-[#202020]",
-  "bg-[#202020]",
-  "bg-red-400",
-];
-
-console.log(data);
-
 const coreStore = useCoreStore();
+
+const data = reactive({
+  projects: coreStore.projects,
+});
+
+// const themeColor = [
+//   "bg-red-400",
+//   "bg-[#202020]",
+//   "bg-[#202020]",
+//   "bg-blue-600",
+//   "bg-green-500",
+//   "bg-[#202020]",
+//   "bg-[#202020]",
+//   "bg-red-400",
+// ];
+
+// console.log(coreStore.projects);
 
 const showProject = computed(() => {
   return coreStore.getShowProject;
 });
 
-function toggleProject(openedProject, color) {
-  console.log(openedProject);
-  console.log(color);
-  coreStore.themeColor = color;
-  coreStore.projectTitle = openedProject;
-  console.log(coreStore.projectTitle);
+// function toggleProject(openedProject, color) {
+//   //   console.log(openedProject);
+//   //   console.log(color);
+//   coreStore.themeColor = color;
+//   coreStore.projectTitle = openedProject;
+//   //   console.log(coreStore.projectTitle);
+//   coreStore.showProject = !coreStore.showProject;
+// }
+
+function toggleProject(projectIndex) {
+  //   console.log(openedProject);
+  //   console.log(color);
+  //   coreStore.themeColor = color;
+  coreStore.projectIndex = projectIndex;
+  //   console.log(coreStore.projectIndex);
+  //   console.log(coreStore.projects[projectIndex]);
+  //   console.log(coreStore.projectTitle);
   coreStore.showProject = !coreStore.showProject;
 }
 </script>
