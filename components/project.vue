@@ -100,7 +100,7 @@ const coreStore = useCoreStore();
 const db = useFirestore();
 const data = reactive({
   project: coreStore.currentProject,
-  themeColor: coreStore.themeColor,
+  themeColor: coreStore.themeColors[coreStore.projectIndex],
 });
 // const storage = useFirebaseStorage();
 // const imagesRef = storageRef(storage, "images");
@@ -126,18 +126,25 @@ const data = reactive({
 
 // ******* Getting a single file
 
-async function getProject(projectTitle) {
-  const q = query(
-    collection(db, "projects"),
-    where("title", "==", projectTitle)
-  );
+function getProject(projectIndex) {
+  // console.log(coreStore.projects.length - (projectIndex + 1));
+  // console.log("project index:", projectIndex);
+  // console.log("array length", coreStore.projects.length);
+  // console.log("array index", coreStore.projects.length - (projectIndex + 1));
+  data.project =
+    coreStore.projects[coreStore.projects.length - (projectIndex + 1)];
+  // console.log(coreStore.projects);
+  // const q = query(
+  //   collection(db, "projects"),
+  //   where("title", "==", theProject.title)
+  // );
 
-  const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
-    coreStore.currentProject = (doc.id, " => ", doc.data());
-  });
+  // const querySnapshot = await getDocs(q);
+  // querySnapshot.forEach((doc) => {
+  //   // doc.data() is never undefined for query doc snapshots
+  //   // console.log(doc.id, " => ", doc.data());
+  //   coreStore.currentProject = (doc.id, " => ", doc.data());
+  // });
 }
 
 // ************
@@ -187,12 +194,13 @@ watch(
 );
 
 watch(
-  () => coreStore.projectTitle,
+  () => coreStore.projectIndex,
   (newVal) => {
-    if (newVal) {
-      console.log(newVal);
+    if (newVal || newVal === 0) {
+      // console.log(newVal);
+      data.themeColor = coreStore.themeColors[newVal];
       getProject(newVal);
-      console.log(data.project);
+      // console.log(data.project);
     }
   }
 );
@@ -206,14 +214,14 @@ watch(
   }
 );
 
-watch(
-  () => coreStore.themeColor,
-  (newVal) => {
-    if (newVal) {
-      data.themeColor = newVal;
-    }
-  }
-);
+// watch(
+//   () => coreStore.themeColor,
+//   (newVal) => {
+//     if (newVal) {
+//       data.themeColor = newVal;
+//     }
+//   }
+// );
 </script>
 
 <style scoped>
