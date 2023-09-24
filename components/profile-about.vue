@@ -47,7 +47,7 @@
                         <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/bartending.png" alt="Lucian"> 
                       </swiper-slide>
                       <swiper-slide class="w-fit">
-                        <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/checkmate.png" alt="Lucian"> 
+                        <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/bouldering.jpg" alt="Lucian"> 
                       </swiper-slide>
                       <swiper-slide class="w-fit">
                         <img class=" aspect-square object-cover max-w-sm lg:max-w-none w-full h-auto mx-auto" src="../assets/images/graduation.png" alt="Lucian"> 
